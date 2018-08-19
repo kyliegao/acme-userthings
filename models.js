@@ -1,6 +1,6 @@
 Sequelize = require('sequelize')
 postgres = require ('pg')
-const db = new Sequelize('postgres://localhost:5432/acmeusers', {logging:false})
+const db = new Sequelize('postgres://localhost:5432/acmeusers' || process.env.DATABASE_URL, {logging:false})
 
 
 const User = db.define('user',{
