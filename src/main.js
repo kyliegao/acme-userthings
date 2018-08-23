@@ -70,7 +70,9 @@ class Main extends React.Component {
             allUsers: !this.state.allUsers
         })
         console.log(this.state.allUsers)
+        // window.location.hash = this.state.setUser? '': 'filtered'
     }
+
 
 
     async componentDidMount () {
@@ -79,6 +81,13 @@ class Main extends React.Component {
             const users = res.data
             console.log(users)
             this.setState({users: users})
+
+
+            // window.addEventListener('hashchange', function(){
+            //     console.log(window.location.hash, () =>{
+            //     this.setState({setUses})
+            // }
+            // })
         }
         catch(ex){console.log(ex)}
     }

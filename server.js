@@ -2,7 +2,7 @@ express = require('express')
 sequelize = require('sequelize')
 path = require('path')
 app = express()
-const PORT = 3000
+const PORT = process.env.PORT || 3000
 
 const {db, seed, User, Thing, UserThing} = require('./models.js')
 
